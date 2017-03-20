@@ -8,7 +8,7 @@ using std::string;
 using std::cout;
 using std::cin;
 
-class BFInterpreter {
+class OOBFInterpreter {
 private:
     char* arr;
     int index;
@@ -19,13 +19,13 @@ private:
     void decrement_value();
     void print_cell();
     void set_cell();
-    // start_loop
-    // end_loop
-    void set_zeros();
+    string cut_loop(string &code, int i);
+    void set_zeros(); // I think I don't need it
+    void interprete(string code);
 
 public:
-    BFInterpreter();
-    void interprete(string code);
+    OOBFInterpreter();
+    void execute(string programme);
 
 
 
